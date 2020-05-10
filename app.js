@@ -32,3 +32,9 @@ function search(streetName) {
       listOfSearchResult.insertAdjacentHTML('afterbegin', html);
     })
 }
+
+listOfSearchResult.addEventListener('click', function(e) {
+  if(e.target.nodeName === "A") {
+    console.log('HI')
+  }
+})

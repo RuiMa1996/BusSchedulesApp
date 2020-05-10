@@ -1,6 +1,7 @@
 const myAPIKey = '2dXx20LqMATZ1L2vsXr';
 const searchPart = document.querySelector('input');
 const searchBox = document.querySelector('form');
+const listOfSearchResult = document.querySelector('.streets');
 
 searchBox.addEventListener('submit', function(e) {
   e.preventDefault();
@@ -19,9 +20,7 @@ function search(streetName) {
     })
     .then(nameOfStreet => {
       let html = "";
-      console.log(nameOfStreet.streets);
       if(nameOfStreet.streets.length === 0) {
-        console.log('hi');
        html = "No street found"
       } else {
         for(let name of nameOfStreet.streets) {
